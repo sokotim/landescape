@@ -71,12 +71,24 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "wagtail.contrib.forms",
+    "wagtail.contrib.redirects",
+    "wagtail.contrib.modeladmin",
+    "wagtail.embeds",
+    "wagtail.sites",
+    "wagtail.users",
+    "wagtail.snippets",
+    "wagtail.documents",
+    "wagtail.images",
+    "wagtail.search",
+    "wagtail.admin",
+    "wagtail.core",
+    "modelcluster",
+    "taggit",
+    "wagtailmenus",
 ]
 
-LOCAL_APPS = [
-    "landescape.users.apps.UsersConfig",
-    # Your stuff: custom apps go here
-]
+LOCAL_APPS = ["landescape.users.apps.UsersConfig", "landescape.home.apps.HomeConfig"]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -133,6 +145,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 # STATIC
@@ -182,6 +195,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
+                "wagtailmenus.context_processors.wagtailmenus",
                 "landescape.utils.context_processors.settings_context",
             ],
         },
@@ -268,5 +282,6 @@ ACCOUNT_ADAPTER = "landescape.users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "landescape.users.adapters.SocialAccountAdapter"
 
 
-# Your stuff...
+# wagtail
 # ------------------------------------------------------------------------------
+WAGTAIL_SITE_NAME = "Landescape"
