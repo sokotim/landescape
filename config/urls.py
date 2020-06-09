@@ -13,6 +13,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("landescape.users.urls", namespace="users")),
+    path("stations/", include("landescape.stations.urls", namespace="stations")),
     path("accounts/", include("allauth.urls")),
     path("cms/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),

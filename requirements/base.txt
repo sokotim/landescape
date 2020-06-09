@@ -16,3 +16,4 @@ django-redis==4.11.0  # https://github.com/jazzband/django-redis
 
 wagtail==2.9  # https://github.com/wagtail/wagtail
 wagtailmenus==3.0.1  # https://github.com/rkhleics/wagtailmenus
+django-location-field==2.1.0  # https://github.com/caioariede/django-location-field

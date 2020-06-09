@@ -86,9 +86,14 @@ THIRD_PARTY_APPS = [
     "modelcluster",
     "taggit",
     "wagtailmenus",
+    "location_field.apps.DefaultConfig",
 ]
 
-LOCAL_APPS = ["landescape.users.apps.UsersConfig", "landescape.home.apps.HomeConfig"]
+LOCAL_APPS = [
+    "landescape.users.apps.UsersConfig",
+    "landescape.home.apps.HomeConfig",
+    "landescape.stations.apps.StationsConfig",
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -285,3 +290,6 @@ SOCIALACCOUNT_ADAPTER = "landescape.users.adapters.SocialAccountAdapter"
 # wagtail
 # ------------------------------------------------------------------------------
 WAGTAIL_SITE_NAME = "Landescape"
+
+LOCATION_FIELD = {"map.provider": "openstreetmap", "search.provider": "nominatim"}
+
