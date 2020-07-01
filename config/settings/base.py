@@ -93,6 +93,7 @@ LOCAL_APPS = [
     "landescape.users.apps.UsersConfig",
     "landescape.home.apps.HomeConfig",
     "landescape.stations.apps.StationsConfig",
+    "landescape.bookings.apps.BookingsConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
