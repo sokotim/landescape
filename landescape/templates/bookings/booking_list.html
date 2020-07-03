@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+{% for booking in booking_list %}
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">{% blocktrans with start=booking.start|date end=booking.end|date %}Booking from {{ start }} to {{ end }}.{% endblocktrans %}</h3>
+    <p class="card-text">{{ booking.address }}</p>
+  </div>
+</div>
+{% endfor %}
+{% endblock content %}
