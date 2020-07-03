@@ -1,3 +1,4 @@
+from address.models import AddressField
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -12,6 +13,7 @@ class Booking(models.Model):
     )
     start = models.DateField(_("start"), auto_now=False, auto_now_add=False)
     end = models.DateField(_("end"), auto_now=False, auto_now_add=False)
+    address = AddressField(on_delete=models.SET_NULL, null=True)
 
     class Meta:
         verbose_name = _("booking")

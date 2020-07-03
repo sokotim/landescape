@@ -87,6 +87,7 @@ THIRD_PARTY_APPS = [
     "taggit",
     "wagtailmenus",
     "location_field.apps.DefaultConfig",
+    "address",
 ]
 
 LOCAL_APPS = [
@@ -294,3 +295,4 @@ WAGTAIL_SITE_NAME = "Landescape"
 
 LOCATION_FIELD = {"map.provider": "openstreetmap", "search.provider": "nominatim"}
 
+GOOGLE_API_KEY = ""
